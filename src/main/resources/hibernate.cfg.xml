@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <!-- JDBC Database connection settings -->
+        <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
+        <property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/aleksandr</property>
+        <property name="hibernate.connection.username">aleksandr</property>
+        <property name="hibernate.connection.password">0041</property>
+
+        <!-- JDBC connection pool settings -->
+        <property name="hibernate.connection.pool_size">8</property>
+
+        <!-- Hibernate SQL dialect -->
+        <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+
+        <!-- Echo all executed SQL to stdout -->
+        <property name="show_sql">true</property>
+
+        <!-- Enable Hibernate's automatic session context management -->
+        <property name="current_session_context_class">thread</property>
+        <!-- Mapping files -->
+        <mapping class="org.example.Data.Lot"/>
+        <mapping class="org.example.Data.User"/>
+
+        <!-- Uncomment the next line if you have mapping files -->
+        <!-- <mapping resource="com/example/YourEntity.hbm.xml"/> -->
+
+    </session-factory>
+</hibernate-configuration>
